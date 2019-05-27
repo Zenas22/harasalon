@@ -8,7 +8,7 @@ apply plugin: 'application'
 group 'Zeus'
 version '1.0-SNAPSHOT'
 
-
+archivesBaseName = 'harasalon'
 mainClassName = "App"
 
 sourceCompatibility = 1.8

@@ -9,27 +9,27 @@ public class Client {
     private int id;
     private int stylistid;
 
-    public int getStylistid() {
+    public int getStylistId(){
         return stylistid;
     }
 
-    public String getName() {
+    public String getName(){
         return name;
     }
 
-    public int getAge() {
+    public int getAge(){
         return age;
     }
 
-    public String getHuduma() {
+    public String getHuduma(){
         return huduma;
     }
 
-    public String getEmail() {
+    public String getEmail(){
         return email;
     }
 
-    public int getId() {
+    public int getId(){
         return id;
     }
 
@@ -43,7 +43,7 @@ public class Client {
                     this.getAge() == newClient.getAge() &&
                     this.getHuduma().equals(newClient.getHuduma()) &&
                     this.getEmail().equals(newClient.getEmail()) &&
-                    this.getStylistid() == newClient.getStylistid();
+                    this.getStylistId() == newClient.getStylistId();
         }
     }
 
@@ -57,19 +57,20 @@ public class Client {
 
     public static List<Client> all(){
         try(Connection con = DB.sql2o.open()){
-            String sql = "SELECT id,name,age,huduma,email,stylistid FROM clients;";
+            String sql = "SELECT * FROM clients";
             return con.createQuery(sql).executeAndFetch(Client.class);
         }
     }
 
     public void save(){
         try(Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO clients (name,age,huduma,email) VALUES (:name,:age,:huduma,:email);";
+            String sql = "INSERT INTO clients (name,age,huduma,email,stylistid) VALUES (:name,:age,:huduma,:email,:stylistid)";
             this.id = (int) con.createQuery(sql, true)
                     .addParameter("name", this.name)
                     .addParameter("age", this.age)
                     .addParameter("huduma", this.huduma)
                     .addParameter("email", this.email)
+                    .addParameter("stylistid", this.stylistid)
                     .executeUpdate()
                     .getKey();
         }
