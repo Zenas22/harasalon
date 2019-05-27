@@ -62,6 +62,15 @@ public class ClientTest{
         assertTrue(Client.all().get(0).equals(testClient));
     }
 
+    @Test
+    public void find_returnsClientWithTheSameId_true(){
+        Client oneClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com",1);
+        oneClient.save();
+        Client twoClient = new Client("Glory",18,"0008989","glory@gmail.com",1);
+        twoClient.save();
+        assertTrue(Client.find(twoClient.getId()).equals(twoClient));
+    }
+
     @After
     public void tearDown(){
         try(Connection con = DB.sql2o.open()){
