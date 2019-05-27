@@ -71,6 +71,18 @@ public class ClientTest{
         assertTrue(Client.find(twoClient.getId()).equals(twoClient));
     }
 
+    @Test
+    public void update_updatesClientDetails(){
+        Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com",1);
+        testClient.save();
+        testClient.update("Kioko",23,"27536384","kioko@gmail.com",2);
+        Client updated = new Client("Kioko",23,"27536384","kioko@gmail.com",2);
+        assertEquals(updated.getName(),Client.find(testClient.getId()).getName());
+        assertEquals(updated.getAge(),Client.find(testClient.getId()).getAge());
+        assertEquals(updated.getHuduma(),Client.find(testClient.getId()).getHuduma());
+        assertEquals(updated.getStylistId(),Client.find(testClient.getId()).getStylistId());
+    }
+
     @After
     public void tearDown(){
         try(Connection con = DB.sql2o.open()){

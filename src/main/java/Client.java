@@ -1,5 +1,6 @@
 import org.sql2o.*;
 import java.util.List;
+import java.util.SplittableRandom;
 
 public class Client {
     private String name;
@@ -83,6 +84,20 @@ public class Client {
                     .addParameter("id", id)
                     .executeAndFetchFirst(Client.class);
             return client;
+        }
+    }
+
+    public void update(String name, int age, String huduma, String email, int stylistid){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "UPDATE clients SET name= :name, age= :age, huduma= :huduma, email= :email, stylistid= :stylistid WHERE id= :id";
+            con.createQuery(sql)
+                    .addParameter("name", name)
+                    .addParameter("age", age)
+                    .addParameter("huduma", huduma)
+                    .addParameter("email", email)
+                    .addParameter("stylistid", stylistid)
+                    .addParameter("id", id)
+                    .executeUpdate();
         }
     }
 }
