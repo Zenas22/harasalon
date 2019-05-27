@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+            <state relative-caret-position="247">
+              <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#242#243#0" expanded="true" />
@@ -75,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="82" column="90" selection-start-line="82" selection-start-column="90" selection-end-line="82" selection-end-column="90" />
+            <state relative-caret-position="291">
+              <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#255#256#0" expanded="true" />
@@ -100,8 +100,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Stylist.java" />
         <option value="$PROJECT_DIR$/src/test/java/DatabaseRule.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/Client.java" />
         <option value="$PROJECT_DIR$/src/test/java/ClientTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Client.java" />
       </list>
     </option>
   </component>
@@ -186,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ClientTest.update_updatesClientDetails">
+  <component name="RunManager" selected="Gradle.ClientTest.delete_removesClientFromDB_true">
     <configuration name="ClientTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -227,6 +227,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ClientTest.delete_removesClientFromDB_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;ClientTest.delete_removesClientFromDB_true&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="ClientTest.find_returnsClientWithTheSameId_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -243,26 +263,6 @@
           </list>
         </option>
         <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ClientTest.save_true" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ClientTest.save_true&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" value="-ea" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
@@ -289,18 +289,18 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.ClientTest" />
-      <item itemvalue="Gradle.ClientTest.save_true" />
       <item itemvalue="Gradle.ClientTest.all_returnsAllClients_true" />
       <item itemvalue="Gradle.ClientTest.find_returnsClientWithTheSameId_true" />
       <item itemvalue="Gradle.ClientTest.update_updatesClientDetails" />
+      <item itemvalue="Gradle.ClientTest.delete_removesClientFromDB_true" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ClientTest.delete_removesClientFromDB_true" />
         <item itemvalue="Gradle.ClientTest.update_updatesClientDetails" />
         <item itemvalue="Gradle.ClientTest.find_returnsClientWithTheSameId_true" />
         <item itemvalue="Gradle.ClientTest" />
         <item itemvalue="Gradle.ClientTest.all_returnsAllClients_true" />
-        <item itemvalue="Gradle.ClientTest.save_true" />
       </list>
     </recent_temporary>
   </component>
@@ -318,12 +318,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ClientTest_all_returnsAllClients_true - 2019.05.27 at 15h 23m 20s.xml">
-      <configuration name="ClientTest.all_returnsAllClients_true" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="ClientTest_save_true - 2019.05.27 at 15h 26m 11s.xml">
-      <configuration name="ClientTest.save_true" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="ClientTest - 2019.05.27 at 15h 34m 21s.xml">
       <configuration name="ClientTest" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -348,9 +342,15 @@
     <history-entry file="ClientTest_update_updatesClientDetails - 2019.05.27 at 16h 17m 50s.xml">
       <configuration name="ClientTest.update_updatesClientDetails" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="ClientTest_update_updatesClientDetails - 2019.05.27 at 16h 22m 00s.xml">
+      <configuration name="ClientTest.update_updatesClientDetails" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="ClientTest_delete_removesClientFromDB_true - 2019.05.27 at 16h 27m 33s.xml">
+      <configuration name="ClientTest.delete_removesClientFromDB_true" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <frame x="683" y="27" width="683" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.08560606" />
@@ -363,7 +363,7 @@
       <window_info id="Azure Explorer" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44136807" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44281045" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+        <state relative-caret-position="247">
+          <caret line="108" column="37" selection-start-line="108" selection-start-column="37" selection-end-line="108" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#242#243#0" expanded="true" />
@@ -549,8 +549,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="82" column="90" selection-start-line="82" selection-start-column="90" selection-end-line="82" selection-end-column="90" />
+        <state relative-caret-position="291">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#255#256#0" expanded="true" />

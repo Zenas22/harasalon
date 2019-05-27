@@ -83,6 +83,15 @@ public class ClientTest{
         assertEquals(updated.getStylistId(),Client.find(testClient.getId()).getStylistId());
     }
 
+    @Test
+    public void delete_removesClientFromDB_true(){
+        Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com",1);
+        testClient.save();
+        int clientId = testClient.getId();
+        testClient.delete();
+        assertEquals(null, Client.find(clientId));
+    }
+
     @After
     public void tearDown(){
         try(Connection con = DB.sql2o.open()){
