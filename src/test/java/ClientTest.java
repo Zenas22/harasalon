@@ -1,5 +1,5 @@
 import org.junit.*;
-import org.junit.Assert.*;
+import static org.junit.Assert.*;
 import org.sql2o.Sql2o;
 import org.sql2o.Connection;
 
@@ -18,5 +18,17 @@ public class ClientTest{
             con.createQuery(deleteClientsql).executeUpdate();
             con.createQuery(deleteStylistsql).executeUpdate();
         }
+    }
+
+    @Test
+    public void client_instantiates_true(){
+        Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com");
+        assertTrue(testClient instanceof Client);
+    }
+
+    @Test
+    public void client_instantiatesWithName_String(){
+        Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com");
+        assertEquals("Stacy", testClient.getName());
     }
 }
