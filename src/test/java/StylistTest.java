@@ -1,26 +1,22 @@
+import org.sql2o.Connection;
+import org.sql2o.Sql2o;
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.Arrays;
 
 public class StylistTest {
 
-    @Test
-    public void newStylist_instantiates() {
-        Stylist testStylist = new Stylist(1,"Stacy","Nthenya","stacy@gmail.com",22);
-        assertTrue(testStylist instanceof Stylist);
+    @Before
+    public void setUp() {
+        DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/hair_salon_test","zeus","null");
     }
 
-    @Test
-    public void newStylist_firstJina_secondJina_baruaPepe_isString() {
-        Stylist testStylist = new Stylist(1,"Stacy","Nthenya","stacy@gmail.com",22);
-        assertEquals("Stacy", testStylist.getFirstJina());
-        assertEquals("Nthenya", testStylist.getSecondJina());
-        assertEquals("stacy@gmail.com", testStylist.getBaruaPepe());
+    @After
+    public void teardown() {
+        try(Connection con = DB.sql2o.open()) {
+            String deleteStylistsQuery = "DELETE FROM stylists *;";
+            con.createQuery(deleteStylistsQuery).executeUpdate();
+        }
     }
 
-    @Test
-    public void newStylist_umri_id_isInt() {
-        Stylist testStylist = new Stylist(1,"Stacy","Nthenya","stacy@gmail.com",22);
-        assertEquals(1, testStylist.getId());
-        assertEquals(22, testStylist.getUmri());
-    }
 }
