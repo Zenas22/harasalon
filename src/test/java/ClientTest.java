@@ -31,4 +31,22 @@ public class ClientTest{
         Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com");
         assertEquals("Stacy", testClient.getName());
     }
+
+    @Test
+    public void client_instantiatesWithAge_Int(){
+        Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com");
+        assertEquals(22, testClient.getAge());
+    }
+
+    @Test
+    public void client_instantiatesWithHuduma_String(){
+        Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com");
+        assertEquals("32306402", testClient.getHuduma());
+    }
+
+    @Test
+    public void client_instantiatesWithEmail_String(){
+        Client testClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com");
+        assertEquals("stacy@gmail.com", testClient.getEmail());
+    }
 }
