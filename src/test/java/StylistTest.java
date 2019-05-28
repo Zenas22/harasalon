@@ -43,7 +43,7 @@ public class StylistTest{
 
     @Test
     public void stylist_instantiatesWithHuduma_String(){
-        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"32306402","zeus@gmail.com");
         assertEquals("32306402", testStylist.getHuduma());
     }
 
@@ -76,12 +76,12 @@ public class StylistTest{
         oneStylist.save();
         Stylist twoStylist = new Stylist("Lord", "Doyo", 21,790710855,"27536384","lorddoyo@gmail.com");
         twoStylist.save();
-        assertTrue(Stylist.find(twoStylist.getId()));
+        assertEquals(twoStylist, Stylist.find(twoStylist.getId()));
     }
 
     @Test
     public void update_updatesStylistDetails(){
-        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"32306402","zeus@gmail.com");
         testStylist.save();
         testStylist.update("Zenas","Dagod",25,777832108,"32306402","zenas@gmail.com");
         Stylist updated = new Stylist("Zenas","Dagod",25,777832108,"32306402","zenas@gmail.com");
