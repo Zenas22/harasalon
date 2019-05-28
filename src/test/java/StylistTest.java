@@ -70,6 +70,18 @@ public class StylistTest{
         assertTrue(Stylist.all().get(0).equals(testStylist));
     }
 
+    @Test
+    public void find_returnStylistsWithSameId_true(){
+        Stylist oneStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        oneStylist.save();
+        Stylist twoStylist = new Stylist("Lord", "Doyo", 21,790710855,"27536384","lorddoyo@gmail.com");
+        twoStylist.save();
+        assertTrue(Stylist.find(twoStylist.getId()));
+    }
+
+    @Test
+    public void
+
     @After
     public void teardown(){
         try(Connection con = DB.sql2o.open()) {
