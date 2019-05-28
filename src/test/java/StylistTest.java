@@ -18,7 +18,34 @@ public class StylistTest{
     }
 
     @Test
-    public
+    public void stylist_instantiatesWithFirstName_String(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        assertEquals("Zeus", testStylist.getFirstname());
+    }
+
+    @Test
+    public void stylist_instantiatesWithLastName_String(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        assertEquals("Dagod", testStylist.getLastname());
+    }
+
+    @Test
+    public void stylist_instantiatesWithAge_Int(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        assertEquals(25, testStylist.getAge());
+    }
+
+    @Test
+    public void stylist_instatiatesWithPhoneNumber_Int(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        assertEquals(704832108, testStylist.getPhone());
+    }
+
+    @Test
+    public void stylist_instantiatesWithHuduma_String(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        assertEquals("32306402", testStylist.getHuduma());
+    }
 
     @After
     public void teardown(){
