@@ -80,7 +80,18 @@ public class StylistTest{
     }
 
     @Test
-    public void
+    public void update_updatesStylistDetails(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        testStylist.save();
+        testStylist.update("Zenas","Dagod",25,777832108,"32306402","zenas@gmail.com");
+        Stylist updated = new Stylist("Zenas","Dagod",25,777832108,"32306402","zenas@gmail.com");
+        assertEquals(updated.getFirstname(), Stylist.find(testStylist.getId()).getFirstname());
+        assertEquals(updated.getLastname(), Stylist.find(testStylist.getId()).getLastname());
+        assertEquals(updated.getAge(), Stylist.find(testStylist.getId()).getAge());
+        assertEquals(updated.getPhone(), Stylist.find(testStylist.getId()).getPhone());
+        assertEquals(updated.getHuduma(), Stylist.find(testStylist.getId()).getHuduma());
+        assertEquals(updated.getEmail(), Stylist.find(testStylist.getId()).getEmail());
+    }
 
     @After
     public void teardown(){
