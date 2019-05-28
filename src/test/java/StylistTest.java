@@ -14,8 +14,10 @@ public class StylistTest {
     @After
     public void teardown() {
         try(Connection con = DB.sql2o.open()) {
+            String deleteClientsQuery = "DELETE FROM clients *;";
             String deleteStylistsQuery = "DELETE FROM stylists *;";
             con.createQuery(deleteStylistsQuery).executeUpdate();
+            con.createQuery(deleteClientsQuery).executeUpdate();
         }
     }
 
