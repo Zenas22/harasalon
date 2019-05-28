@@ -1,8 +1,10 @@
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.junit.*;
-import static org.junit.Assert.*;
+
 import java.util.Arrays;
+
+import static org.junit.Assert.*;
 
 public class StylistTest{
 
@@ -91,6 +93,35 @@ public class StylistTest{
         assertEquals(updated.getPhone(), Stylist.find(testStylist.getId()).getPhone());
         assertEquals(updated.getHuduma(), Stylist.find(testStylist.getId()).getHuduma());
         assertEquals(updated.getEmail(), Stylist.find(testStylist.getId()).getEmail());
+    }
+
+    @Test
+    public void get_returnsAllClientsForStylist(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"32306402","zeus@gmail.com");
+        testStylist.save();
+        Client oneClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com", testStylist.getId());
+        oneClient.save();
+        Client twoClient = new Client("Glory",18,"0008989","glory@gmail.com",testStylist.getId());
+        twoClient.save();
+        Client[] clients = new Client[] {oneClient,twoClient};
+        assertTrue(testStylist.getClients().containsAll(Arrays.asList(clients)));
+    }
+
+    @Test
+    public void delete_removesStylistsAndClients(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"32306402","zeus@gmail.com");
+        testStylist.save();
+        Client oneClient = new Client("Stacy", 22, "32306402", "stacy@gmail.com", testStylist.getId());
+        oneClient.save();
+        Client twoClient = new Client("Glory",18,"0008989","glory@gmail.com",testStylist.getId());
+        twoClient.save();
+        int stylistid = testStylist.getId();
+        int oneClientid = oneClient.getId();
+        int twoClientid = twoClient.getId();
+        testStylist.delete();
+        assertEquals(null, Stylist.find(stylistid));
+        assertEquals(null, Client.find(oneClientid));
+        assertEquals(null, Client.find(twoClientid));
     }
 
     @After
