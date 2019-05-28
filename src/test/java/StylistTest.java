@@ -36,7 +36,7 @@ public class StylistTest{
     }
 
     @Test
-    public void stylist_instatiatesWithPhoneNumber_Int(){
+    public void stylist_instantiatesWithPhoneNumber_Int(){
         Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
         assertEquals(704832108, testStylist.getPhone());
     }
