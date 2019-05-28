@@ -63,6 +63,13 @@ public class StylistTest{
         assertTrue(Stylist.all().contains(twoStylist));
     }
 
+    @Test
+    public void save_true(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        testStylist.save();
+        assertTrue(Stylist.all().get(0).equals(testStylist));
+    }
+
     @After
     public void teardown(){
         try(Connection con = DB.sql2o.open()) {
