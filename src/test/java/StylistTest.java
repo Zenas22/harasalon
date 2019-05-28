@@ -53,6 +53,16 @@ public class StylistTest{
         assertEquals("zeus@gmail.com", testStylist.getEmail());
     }
 
+    @Test
+    public void all_returnsAllInstancesOfStylists_true(){
+        Stylist oneStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        oneStylist.save();
+        Stylist twoStylist = new Stylist("Lord", "Doyo", 21,790710855,"27536384","lorddoyo@gmail.com");
+        twoStylist.save();
+        assertTrue(Stylist.all().contains(oneStylist));
+        assertTrue(Stylist.all().contains(twoStylist));
+    }
+
     @After
     public void teardown(){
         try(Connection con = DB.sql2o.open()) {
