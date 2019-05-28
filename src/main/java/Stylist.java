@@ -63,4 +63,26 @@ public class Stylist{
                     this.getEmail().equals(newStylist.getEmail());
         }
     }
+
+    public static List<Stylist> all(){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "SELECT * FROM stylists;";
+            return con.createQuery(sql).executeAndFetch(Stylist.class);
+        }
+    }
+
+    public void save(){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "INSERT INTO stylists (firstname, lastname, age, phone, huduma, email) VALUES (:firstname, :lastname, :age, :phone, :huduma, :email)";
+            this.id = (int) con.createQuery(sql, true)
+                    .addParameter("firstname", firstname)
+                    .addParameter("lastname", lastname)
+                    .addParameter("age", age)
+                    .addParameter("phone", phone)
+                    .addParameter("huduma", huduma)
+                    .addParameter("email", email)
+                    .executeUpdate()
+                    .getKey();
+        }
+    }
 }
