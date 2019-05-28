@@ -2,14 +2,14 @@ import java.util.Map;
 import java.util.HashMap;
 
 import spark.ModelAndView;
-import spark.template.velocity.VelocityTemplateEngine;
+//import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 
 public class App{
     public static void main(String[] args){
         staticFileLocation("/public");
-        String layout = "temlates/layout.vtl";
+        String layout = "templates/layout.vtl";//add footer
         String index = "templates/index.vtl";
 
         get("/",(request, response) -> {
