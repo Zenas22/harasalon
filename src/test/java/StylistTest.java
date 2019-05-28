@@ -47,6 +47,12 @@ public class StylistTest{
         assertEquals("32306402", testStylist.getHuduma());
     }
 
+    @Test
+    public void stylist_instantiatesWithEmail_String(){
+        Stylist testStylist = new Stylist("Zeus","Dagod",25,704832108,"323206402","zeus@gmail.com");
+        assertEquals("zeus@gmail.com", testStylist.getEmail());
+    }
+
     @After
     public void teardown(){
         try(Connection con = DB.sql2o.open()) {
