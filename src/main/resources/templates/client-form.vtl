@@ -1,3 +1,8 @@
+<div class="row">
+  <div class="jumbotron">
+    <h1 class="display-2">Clients</h1>
+  </div>
+</div>
 <form action="/clients" method="post">
           <div class="form-group">
             <label for="name">Name: </label>
@@ -23,7 +28,7 @@
             <select class="custom-select" id="stylistid" name="stylistid">
                 <option class="text-grey" disabled selected>Choose...</option>
                 #foreach($stylist in $stylists)
-                <option value="$stylist.getId()" required>$stylist.getFirstName()</option>
+                <option value="$stylist.getId()" required>$stylist.getFirstname()</option>
                 #end
             </select>
             </div>

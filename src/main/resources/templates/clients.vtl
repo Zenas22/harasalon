@@ -1,6 +1,7 @@
 <div class="row">
   <div class="jumbotron">
     <h1 class="display-2">Clients</h1>
+    <a class="btn btn-primary" href="/client-form">Add a Client</a>
   </div>
 </div>
 <br>
@@ -13,8 +14,8 @@
             <img src="" class="card-img-top" alt="">
             <div class="card-body text-white">
                <h5 class="card-title">$client.getName()</h5>
-               <p class="card-text">$client.getAge()</p>
-               <p class="card-text">$client.getEmail()</p>
+               <p class="card-text">Age: $client.getAge()</p>
+               <p class="card-text">Email: $client.getEmail()</p>
                <a class="btn btn-primary" href="/clients/$client.getId()">View Client</a>
             </div>
           </div>
@@ -26,5 +27,5 @@
       <p class="title display-2">No Clients!</p>
     </div>
   #end
-    <a class="btn btn-primary" href="/client-form">Add a Client</a>
+
 </div>

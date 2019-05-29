@@ -2,7 +2,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 import spark.ModelAndView;
-import spark.template.velocity.VelocityTemplateEngine;
+//import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 
@@ -129,7 +129,7 @@ public class App{
             String huduma = request.queryParams("huduma");
             String email = request.queryParams("email");
             client.update(name,age,huduma,email,stylist.getId());
-            String url = String.format("/stylists/%d/clients/%d", stylist.getId(), client.getId());
+            String url = String.format("/clients/%d", client.getId());
             response.redirect(url);
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());

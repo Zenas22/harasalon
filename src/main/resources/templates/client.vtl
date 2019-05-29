@@ -2,12 +2,15 @@
   <div class="jumbotron-fluid">
     <h2 class="display-3">$client.getName()</h2>
     <hr>
-    <p>Age: client.getAge()</p>
+
     <p>Huduma number: $client.getHuduma()</p>
     <p>Email: $client.getEmail()</p>
   </div>
-  <div class="card-group">
+  <div class="card-deck">
     <div class="card">
+      <div class="card-title">
+                  <h4class="card-text">Delete</h4>
+                </div>
       <div class="card-body">
         <form action="/clients/$client.getId()/delete" method="post">
           <div class="alert alert-danger" role="alert">
@@ -19,8 +22,8 @@
     </div>
     <div class="card">
       <div class="card-title">
-        <p>Edit Details</p>
-      </div>
+                  <h4 class="card-text">Update</h4>
+                </div>
       <div class="card-body">
         <form action="/clients/$client.getId()/update" method="post">
           <div class="form-group">
@@ -47,7 +50,7 @@
             <select class="custom-select" id="stylistid" name="stylistid">
                 <option class="text-grey" disabled selected>Choose...</option>
                 #foreach($stylist in $stylists)
-                <option value="$stylist.getId()">$stylist.getFirstName()</option>
+                <option value="$stylist.getId()">$stylist.getFirstname()</option>
                 #end
             </select>
             </div>
