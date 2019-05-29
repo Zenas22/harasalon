@@ -2,6 +2,9 @@
 
 body{
   background-color: inherit;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 a:hover {
   text-decoration: none;
@@ -12,30 +15,31 @@ h1,h2,h3,h4,h5{
   font-family: 'Abel', sans-serif;
 }
 .navbar-nav{
-  justify-content: flex-end;
+  justify-content: right;
 }
 .mbele{
   background-image: url(/images/openbs.jpg);
   background-position: center;
-  background-size: content;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .kichwa{
   justify-content: center;
+  text-align: center;
   margin-top: 200px;
 }
 .seats{
   background-image: url(/images/seats.jpg);
-  background-size: content;
+  background-size: cover;
   background-position: center;
 }
 .seat{
   background-image: url(/images/seat.jpg);
   background-position: center;
-  background-size: content;
+  background-size: cover;
 }
 .sinks{
   background-image: url(/images/sinks.jpg);
   background-position: center;
-  background-size: content;
+  background-size: cover;
 }
