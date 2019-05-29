@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="jumbotron-fluid">
+    <h2 class="display-3">$client.getName()</h2>
+    <hr>
+    <p>Age: client.getAge()</p>
+    <p>Huduma number: $client.getHuduma()</p>
+    <p>Email: $client.getEmail()</p>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <form action="/clients/$client.getId()/delete" method="post">
+          <div class="alert alert-danger" role="alert">
+            This will delete the client!
+          </div>
+          <button type="submit" class="btn btn-danger" id="delete-stylist">Delete Client</button>
+        </form>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">
+        <p>Edit Details</p>
+      </div>
+      <div class="card-body">
+        <form action="/clients/$client.getId()/update" method="post">
+          <div class="form-group">
+            <label for="name">Name: </label>
+            <input id="name" name="name" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="age">Age: </label>
+            <input id="age" name="age" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="huduma">Huduma number: </label>
+            <input id="huduma" name="huduma" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input id="email" name="email" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label for="stylistid" class="input-group-text">Stylist</label>
+            </div>
+            <select class="custom-select" id="stylistid" name="stylistid">
+                <option class="text-grey" disabled selected>Choose...</option>
+                #foreach($stylist in $stylists)
+                <option value="$stylist.getId()">$stylist.getFirstName()</option>
+                #end
+            </select>
+            </div>
+          </div>
+          <button class="btn btn-primary type="submit">Edit Client</button
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
