@@ -1,3 +1,4 @@
+<div class="sinks">
 <div class="row">
   <div class="jumbotron">
     <h1 class="display-2">Stylists</h1>
@@ -11,7 +12,7 @@
         <div class="card-group">
         #foreach($stylist in $stylists)
           <div class="card bg-dark style="width: 18rem;">
-            <img src="" class="card-img-top" alt="">
+            <img src="/images/person.png" class="card-img-top" alt="person icon">
             <div class="card-body text-white">
                <h5 class="card-title">$stylist.getFirstname() $stylist.getLastname()</h5>
                <p class="card-text">$stylist.getPhone()</p>
@@ -28,4 +29,5 @@
     </div>
   #end
 
+</div>
 </div>
