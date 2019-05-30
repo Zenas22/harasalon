@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
 body{
-  background-color: inherit;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -20,7 +19,7 @@ h1,h2,h3,h4,h5{
 .mbele{
   background-image: url(/images/openbs.jpg);
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .kichwa{
@@ -30,16 +29,16 @@ h1,h2,h3,h4,h5{
 }
 .seats{
   background-image: url(/images/seats.jpg);
-  background-size: auto;
+  background-size: cover;
   background-position: center;
 }
 .seat{
   background-image: url(/images/seat.jpg);
   background-position: center;
-  background-size: auto;
+  background-size: cover;
 }
 .sinks{
   background-image: url(/images/sinks.jpg);
   background-position: center;
-  background-size: auto;
+  background-size: cover;
 }
