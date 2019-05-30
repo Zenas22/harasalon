@@ -1,0 +1,102 @@
+<div class="sinks">
+<div class="row">
+<section>
+  <div class="jumbotron">
+    <h1 class="display-2">$stylist.getFirstname() $stylist.getLastname()</h1>
+    <h3>Age: $stylist.getAge()</h3>
+    <h3>Huduma number: $stylist.getHuduma()</h3>
+    <h3>Phone number: $stylist.getPhone()</h3>
+    <h3>Email: $stylist.getEmail()</h3>
+  </div>
+
+  #if($stylist.getClients().size() > 0)
+  <h3>Clients:</h3>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Huduma</th>
+      </tr>
+    </thead>
+        #foreach($client in $stylist.getClients())
+    <tbody>
+      <tr>
+        <td>$client.getId()</td>
+        <td><a href="/stylists/$stylist.getId()/clients/$client.getId()">$client.getName()</a></td>
+        <td>$client.getEmail()</td>
+        <td>$client.getHuduma()</td>
+      </tr>
+    </tbody>
+        #end
+  </table>
+  #else
+    <div class="alert alert-dark" role="alert">
+      $stylist.getFirstname() has no clients.
+      <a class="btn btn-primary" href="/client-form">Add a Client</a>
+    </div>
+  #end
+
+  </section>
+  <section>
+  <div class="jumbotron">
+
+        <div class="card">
+          <div class="card-title">
+            <h4 class="card-text text-center">Delete</h4>
+          </div>
+          <div class="card-body">
+            <form action="/stylists/$stylist.getId()/delete" method="post">
+              <div class="alert alert-danger" role="alert">
+                This will delete the clients under the stylists too!
+              </div>
+              <button type="submit" class="btn btn-danger" id="delete-stylist">Delete Stylist</button>
+            </form>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <h4 class="card-text text-center">Update</h4>
+          </div>
+          <div class="card-body">
+            <form action="/stylists/$stylist.getId()/update" method="post">
+                <div class="form-group">
+                  <label for="firstname">First name:</label>
+                  <input id="firstname" name="firstname" type="text" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="lastname">Last name:</label>
+                  <input id="lastname" name="lastname" type="text" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="age">Age:</label>
+                  <input id="age" name="age" type="text" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="phone">Phone number:</label>
+                  <input id="phone" name="phone" type="text" class="form-control" placeholder="Enter the digits after +254 eg. 7 77832108">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="huduma">Huduma number:</label>
+                  <input id="huduma" name="huduma" type="text" class="form-control">
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input id="email" name="email" type="text" class="form-control">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Update Stylist</button>
+              </form>
+          </div>
+        </div>
+
+  </div>
+</section>
+</div>
+</div>

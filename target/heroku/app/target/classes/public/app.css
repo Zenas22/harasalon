@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+body{
+  background-color: inherit;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+a:hover {
+  text-decoration: none;
+  text-transform: none;
+  text-decoration-style: none;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Abel', sans-serif;
+}
+.navbar-nav{
+  justify-content: right;
+}
+.mbele{
+  background-image: url(/images/openbs.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.kichwa{
+  justify-content: center;
+  text-align: center;
+  margin-top: 200px;
+}
+.seats{
+  background-image: url(/images/seats.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.seat{
+  background-image: url(/images/seat.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.sinks{
+  background-image: url(/images/sinks.jpg);
+  background-position: center;
+  background-size: cover;
+}

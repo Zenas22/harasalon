@@ -3,6 +3,6 @@ import org.sql2o.*;
 public class DB {
 //    public static Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/hair_salon", "zeus", "null");
 
-    String connectionString = "jdbc:postgresql://ec2-50-19-254-63.compute-1.amazonaws.com:5432/d1qpct8hjmhbeh";
-    Sql2o sql2o = new Sql2o(connectionString, "ezfueykevmjzql","28045ca9513d24d24195cc73bcdfd73b1411cb4e5688727c260fa10104a981d9");
+    String connectionString = "jdbc:postgresql://ec2-54-221-214-3.compute-1.amazonaws.com:5432/d15ge4mgdbgcg";
+    static Sql2o sql2o = new Sql2o("jdbc:postgresql://ec2-54-221-214-3.compute-1.amazonaws.com:5432/d15ge4mgdbgcg", "izilsdxgtjhics","bfcf88750b8d2c6d8acc8761f3bb5494bd8b1713e53678d9ffcbfc6550d94bfd");
 }
