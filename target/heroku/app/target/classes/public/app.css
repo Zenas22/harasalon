@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5{
 .mbele{
   background-image: url(/images/openbs.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
 }
 .kichwa{
@@ -30,16 +30,16 @@ h1,h2,h3,h4,h5{
 }
 .seats{
   background-image: url(/images/seats.jpg);
-  background-size: cover;
+  background-size: auto;
   background-position: center;
 }
 .seat{
   background-image: url(/images/seat.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: auto;
 }
 .sinks{
   background-image: url(/images/sinks.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: auto;
 }
