@@ -27,7 +27,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Download Intellij from https://www.jetbrains.com/idea/download/#section=linux
 
-2. Visit my GitHub repository; User name Mbugua Mwaura and clone the following link: https://github.com/MbuguaMwaura/HairSalon You can also download the files into you folder and unzip it to access the files.
+2. Visit my GitHub repository; User name Mbugua Mwaura and clone the following link: https://github.com/Zenas22/harasalon You can also download the files into you folder and unzip it to access the files.
 
 3. Open the project with Intellij.
 
@@ -52,15 +52,15 @@ psql
 
 6. Restore the database schema (tables and columns) by running the following commands:
 
-# CREATE DATABASE your_database_name
+###### CREATE DATABASE your_database_name
 
-$ psql name_of_database < schema.sql
+$ psql name_of_database < media.sql
 
 notice that the second command is run in bash and not on psql
 
 ### Behaviour Driven Development (BDD)
 
-|-------------------------|-----------------------|-----------------------|
+
 |Behaviour                |Input Example	      |Output Example         |
 |:-----------------------:|:---------------------:|:---------------------:|
 |Input a Stylist	      |Stacy Nthenya	      |creates a stylist      |
